@@ -1,0 +1,7 @@
+{
+  "name": "watchApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
