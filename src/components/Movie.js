@@ -15,11 +15,10 @@ const Movie = ({ id, title, overview, poster_path }) => {
 
   return (
     <Link to={`/movie/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
-      <div className="movie">
+      <li className="movie">
         <LazyLoad
           once={true}
           placeholder={<img src={placeHolder} alt="..." />}
-
         >
           <div className="movie-img">
             <img src={poster} alt="..." />
@@ -29,7 +28,7 @@ const Movie = ({ id, title, overview, poster_path }) => {
           <h4>{title}</h4>
           <p>{overview}</p>
         </div>
-      </div>
+      </li>
     </Link>
   )
 }

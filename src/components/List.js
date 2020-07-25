@@ -9,16 +9,18 @@ const List = ({ listdata }) => {
   } else {
     return (
       <div className="movie-container">
-        {listdata && listdata.results.map(movie => (
-          <LazyLoad
-            key={movie.id}
-            height={50}
-            offset={[-50, 50]}
-            placeholder={listdata.page === listdata.total_pages ? null : <Spinner />}
-          >
-            <Movie key={movie.id} {...movie} />
-          </LazyLoad>
-        ))}
+        <ul>
+          {listdata && listdata.results.map(movie => (
+            <LazyLoad
+              key={movie.id}
+              height={50}
+              offset={[-50, 50]}
+              placeholder={listdata.page === listdata.total_pages ? null : <Spinner />}
+            >
+              <Movie key={movie.id} {...movie} />
+            </LazyLoad>
+          ))}
+        </ul>
       </div>
     )
   }
