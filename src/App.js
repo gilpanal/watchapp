@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/">
             <Home />
           </Route>
+          <Route component={Home} />
         </Switch>
       </Router>
     )

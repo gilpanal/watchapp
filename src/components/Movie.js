@@ -11,17 +11,17 @@ const Movie = ({ id, title, overview, poster_path }) => {
     
     return (
         <Link to={`/movie/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
-            <div className="post">
+            <div className="movie">
                 <LazyLoad
                     once={true}
                     placeholder={<img src={placeHolder} alt="..." />}
                     
                 >
-                    <div className="post-img">
+                    <div className="movie-img">
                     <img src={poster} alt="..." />                
                     </div>
                 </LazyLoad>
-                <div className="post-body">
+                <div className="movie-body">
                     <h4>{title}</h4>
                     <p>{overview}</p>
                 </div>

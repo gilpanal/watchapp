@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";
-import Spinner from '../components/Spinner'
+import React, {useState, useEffect} from 'react'
 import List from '../components/List'
 import { queryIMDB } from '../components/Helper'
 
@@ -28,26 +27,22 @@ const Home = () => {
     fetchData()
   }, [searchMovie])
   
-  if(!initialData){
-    return <Spinner/>
-  } else {
-    return(
-        <div className="App">        
-         <h2>Watch App</h2>
+  return(
+      <div className="App">        
+        <h2>Watch App</h2>        
         <form onSubmit={handleSearchMovie}>
-            <input
-              type="text"
-              name="search"
-              className="field"
-              placeholder="Type id imbd"
-            />
-            <button className="button">Search</button>
-          </form>
-        <List listdata={initialData} />       
-      </div>
-    )
-  }
-  
+          <input
+            type="text"
+            name="search"
+            className="field"
+            placeholder="Type id imbd"
+          />
+          <button className="button">Search</button>
+        </form>
+        <br/>
+      <List listdata={initialData} />       
+    </div>
+  )  
 }
 
 export default Home;

@@ -1,6 +1,6 @@
 import React from "react";
 const Spinner = () => (
-    <div className="post loading">
+    <div className="movie loading">
       <svg
         width="80"
         height="80"

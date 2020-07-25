@@ -21,10 +21,9 @@ const Detail = (props)  => {
       } else {
 	return (
         <div>
-            <div className="abcde" id="abcde">
-                <Link to={`/`} style={{ textDecoration: 'none', color: 'black' }}><div className="Fresh Mango"></div></Link>
-                <h1 className="sky14">{initialData ? initialData.title : 'No Info'}</h1>
-                <div className="Fresh Orange"></div>
+            <div className="header-detail">
+                <Link to={`/`} style={{ textDecoration: 'none', color: 'black' }}><div className="nav-back"></div></Link>
+                <h1 className="movie-detail-title">{initialData ? initialData.title : 'No Info'}</h1>                
             </div>
             <div className="movie-card">
                 {initialData ? (
