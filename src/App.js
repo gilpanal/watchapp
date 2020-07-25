@@ -4,8 +4,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import List from './List'
-import Detail from './Detail'
+import Home from './pages/Home'
+import Detail from './pages/Detail'
 
 const App = () => {
   
@@ -21,7 +21,7 @@ const App = () => {
               )}
             />        
           <Route path="/">
-            <List />
+            <Home />
           </Route>
         </Switch>
       </Router>
