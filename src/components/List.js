@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react'
 import Movie from './Movie'
 import Spinner from './Spinner'
-import LazyLoad from "react-lazyload";
+import LazyLoad from 'react-lazyload'
 
 const List = ({ listdata }) => {
-  
   if (!listdata) {
     return <Spinner />
-  } else {    
+  } else {
     return (
       <div className="movie-container">
         {listdata && listdata.results.map(movie => (
@@ -15,7 +14,7 @@ const List = ({ listdata }) => {
             key={movie.id}
             height={50}
             offset={[-50, 50]}
-           placeholder={listdata.page === listdata.total_pages ? null : <Spinner />}        
+            placeholder={listdata.page === listdata.total_pages ? null : <Spinner />}
           >
             <Movie key={movie.id} {...movie} />
           </LazyLoad>
@@ -23,8 +22,6 @@ const List = ({ listdata }) => {
       </div>
     )
   }
-
-
 }
 
-export default List;
+export default List

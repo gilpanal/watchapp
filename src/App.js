@@ -1,34 +1,30 @@
-import React from "react";
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-} from "react-router-dom";
+  Route
+} from 'react-router-dom'
 import Home from './pages/Home'
 import Detail from './pages/Detail'
 
 const App = () => {
-  
- 
-    return(
-      <Router>           
+  return (
+    <Router>
       <Switch>
         <Route
-              path="/movie/:movieId"
-              exact 
-              render={(props) => (
-                  <Detail {...props} />
-              )}
-            />        
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route component={Home} />
-        </Switch>
-      </Router>
-    )
-  
-  
+          path="/movie/:movieId"
+          exact
+          render={(props) => (
+            <Detail {...props} />
+          )}
+        />
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route component={Home} />
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
