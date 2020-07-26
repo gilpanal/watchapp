@@ -1,6 +1,6 @@
 import React from 'react'
 import { string, number } from 'prop-types'
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import LazyLoad from 'react-lazyload'
 import './Movie.css'
 
@@ -12,24 +12,24 @@ const Movie = ({ id, title, overview, poster_path }) => {
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
 
   return (
-    <BrowserRouter>
-      <Link to={`/movie/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
-        <li className="movie">
-          <LazyLoad
-            once={true}
-            placeholder={<img src={placeHolder} alt="..." />}
-          >
-            <div className="movie-img">
-              <img src={poster} alt="..." />
-            </div>
-          </LazyLoad>
-          <div className="movie-body">
-            <h4>{title}</h4>
-            <p>{overview}</p>
+
+    <Link to={`/movie/${id}`} style={{ textDecoration: 'none', color: 'black' }}>
+      <li className="movie">
+        <LazyLoad
+          once={true}
+          placeholder={<img src={placeHolder} alt="..." />}
+        >
+          <div className="movie-img">
+            <img src={poster} alt="..." />
           </div>
-        </li>
-      </Link>
-    </BrowserRouter>
+        </LazyLoad>
+        <div className="movie-body">
+          <h4>{title}</h4>
+          <p>{overview}</p>
+        </div>
+      </li>
+    </Link>
+
   )
 }
 

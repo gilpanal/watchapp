@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 import { queryIMDB } from '../components/Helper'
 import './Detail.css'
@@ -21,10 +21,9 @@ const Detail = (props) => {
     return (
       <div>
         <div className="header-detail">
-          <BrowserRouter>
-            <Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}><div className="nav-back"></div></Link>
-            <h1 className="movie-detail-title">{initialData ? initialData.title : 'No Info'}</h1>
-          </BrowserRouter>
+
+          <Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}><div className="nav-back"></div></Link>
+          <h1 className="movie-detail-title">{initialData ? initialData.title : 'No Info'}</h1>
         </div>
         <div className="movie-card">
           {initialData ? (
