@@ -11,7 +11,7 @@ export const queryIMDB = async (query, page) => {
         result = data
       })
   } catch (error) {
-    result = error
+    result = { error: error || 'Unknown error' }
   }
   return result
 }

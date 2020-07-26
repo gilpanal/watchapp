@@ -30,7 +30,8 @@ const Home = () => {
   return (
     <div className="home">
       <Header handleSearchMovie={handleSearchMovie} />
-      <List listdata={initialData} />
+      { initialData && initialData.results && <List listdata={initialData} />}
+      { initialData && !initialData.results && 'Sorry, something went wrong :('}
     </div>
   )
 }
