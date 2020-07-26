@@ -12,8 +12,15 @@
 5. npm start
 6. Open http://localhost:3000
 
+## Home page
 
-Inspired by:
+![Home page screenshot](https://raw.githubusercontent.com/gilpanal/watchapp/master/screenshots/home_page.png)
+
+## Detail page
+
+![Detail page screenshot](https://raw.githubusercontent.com/gilpanal/watchapp/master/screenshots/detail_page.png)
+
+### Inspired by:
 - https://www.freecodecamp.org/news/how-to-optimize-react-applications-with-lazy-loading-232183e02768/
 - https://github.com/mauriciogc/search-id-imdb-with-useeffect-
 
